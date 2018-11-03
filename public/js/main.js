@@ -1,5 +1,8 @@
 (function () {
+      var buttons = document.querySelectorAll('button')
 
-  // your js goes here
+      buttons[0].addEventListener('click', function () {
+        buttons[0].classList.toggle('button-danger');
+      })
 
 })();
