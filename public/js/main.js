@@ -9,5 +9,10 @@
       function changeText() {
         buttons[1].innerText = 'you click me';
       }
+      buttons[2].addEventListener('click', changeBack);
+
+      function changeBack() {
+        buttons[1].innerText = 'button two';
+      }
 
 })();
