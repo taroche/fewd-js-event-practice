@@ -1,18 +1,19 @@
 (function () {
-      var buttons = document.querySelectorAll('button')
+  var row = document.querySelector('main > div');
+  var buttons = document.querySelectorAll('button');
 
-      buttons[0].addEventListener('click', function () {
-        buttons[0].classList.toggle('button-danger');
-      })
-      buttons[1].addEventListener('click', changeText);
+  row.addEventListener('click', handleEvent);
 
-      function changeText() {
-        buttons[1].innerText = 'you click me';
-      }
-      buttons[2].addEventListener('click', changeBack);
-
-      function changeBack() {
-        buttons[1].innerText = 'button two';
-      }
+  function handleEvent (event) {
+    if (event.target === buttons[0]){
+      event.target.classList.toggle('button-danger');
+    }
+    if (event.target === buttons[1]){
+      event.target.innerText = 'you clicked me'
+    }
+    if (event.target === buttons[2]){
+      buttons[1].innerText = 'button two'
+    }
+  }
 
 })();
